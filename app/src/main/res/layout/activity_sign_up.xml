@@ -1,9 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F3FDE6"
     tools:context=".SignUpActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10sp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Welcome !\n Please Sign Up"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorApp"
+                android:padding="15sp"
+                android:layout_marginTop="10sp"/>
+            <ImageView
+                android:layout_width="125sp"
+                android:layout_height="125sp"
+                android:src="@drawable/sport"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10sp"
+                android:padding="10sp"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginLeft="10sp">
+            <EditText
+                android:id="@+id/fullNameSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="FullName"
+                android:inputType="text"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="15sp"
+                android:drawableRight="@drawable/person"
+                android:drawableTint="#3D70EF"
+                android:background="@drawable/shape"
+                android:layout_marginTop="10sp" />
+            <EditText
+                android:id="@+id/emailSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="15sp"
+                android:drawableRight="@drawable/email"
+                android:drawableTint="#3D70EF"
+                android:background="@drawable/shape"
+                android:layout_marginTop="10sp"/>
+            <EditText
+                android:id="@+id/passwordSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="15sp"
+                android:drawableRight="@drawable/key"
+                android:drawableTint="#3D70EF"
+                android:background="@drawable/shape"
+                android:layout_marginTop="10sp"/>
+            <EditText
+                android:id="@+id/phoneSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:inputType="text"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="15sp"
+                android:drawableRight="@drawable/phone"
+                android:drawableTint="#3D70EF"
+                android:background="@drawable/shape"
+                android:layout_marginTop="10sp"/>
+            <EditText
+                android:id="@+id/cinSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="CIN"
+                android:inputType="text"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="15sp"
+                android:drawableRight="@drawable/cin"
+                android:drawableTint="#3D70EF"
+                android:background="@drawable/shape"
+                android:layout_marginTop="10sp"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/colorApp"
+            android:layout_margin="10sp"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/goToSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You have an account !"
+            android:layout_marginTop="10sp"
+            android:textColor="#3F51B5"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            tools:ignore="DuplicateIds" />
+    </LinearLayout>
+</ScrollView>
