@@ -10,11 +10,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.aplicationmedicale.models.UserProfile;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -93,6 +96,12 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void sendUserData() {
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = firebaseDatabase.getReference("Users");
+        UserProfile userProfile = new UserProfile(fullNameSt,emailSt,cinSt,phoneSt);
+        myRef.child(""+firebaseAuth.getUid()).setValue(userProfile);
+
+
 
     }
 
