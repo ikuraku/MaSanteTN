@@ -13,6 +13,12 @@
         android:theme="@style/Theme.AplicationMedicale"
         tools:targetApi="31">
         <activity
+            android:name=".profileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrincipalActivity"
+            android:exported="false" />
+        <activity
             android:name=".ForgetPass"
             android:exported="false" />
         <activity

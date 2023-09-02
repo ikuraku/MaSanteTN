@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Aplication medicale</string>
+    <string name="app_welcome">Welcome to your application</string>
 </resources>

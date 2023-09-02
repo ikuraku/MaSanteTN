@@ -6,4 +6,15 @@
     </style>
 
     <style name="Theme.AplicationMedicale" parent="Base.Theme.AplicationMedicale" />
+
+
+    <style name="NavigationTheme">
+        <!--color of text and icon selected -->
+        <item name="colorPrimary">@color/colorApp</item>
+
+        <!--background color selected -->
+        <item name="colorControlHighlight">@color/black</item>
+
+
+    </style>
 </resources>

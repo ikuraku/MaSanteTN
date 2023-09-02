@@ -28,6 +28,7 @@ public class SignUpActivity extends AppCompatActivity {
     private Button btnSignUp;
     private FirebaseAuth firebaseAuth;
     private String  fullNameSt,emailSt,passwordSt,phoneSt,cinSt;
+
     private static final String EMAIL_REGEX =
             "^[_A-za-z0-9-\\+]+(\\.[_A-za-z0-9]+)*@"
             + "[_A-za-z0-9-\\+]+(\\.[_A-za-z0-9]+)*(\\.[A-Za-z]{2,})$";
@@ -134,5 +135,4 @@ public class SignUpActivity extends AppCompatActivity {
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
-
     }

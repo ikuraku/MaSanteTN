@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text=" Forget Password ?"
-            android:gravity="center"
+            android:gravity="end"
             android:textSize="26sp"
             android:textStyle="bold"
             android:textColor="@color/colorApp"
@@ -53,6 +53,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/emailForgetPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12sp"
@@ -65,9 +66,10 @@
 
         </LinearLayout>
         <Button
+            android:id="@+id/btnResetPass"
             android:layout_width="250sp"
             android:layout_height="wrap_content"
-            android:text="Resert Password"
+            android:text="Reset Password"
             android:layout_gravity="center"
             android:backgroundTint="@color/colorApp"
             android:layout_margin="10sp"
