@@ -4,7 +4,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -56,7 +55,7 @@ public class SignInActivity extends AppCompatActivity {
         String checkBox = preferences.getString("remember","");
 
         if (checkBox.equals("true")){
-            startActivity(new Intent(SignInActivity.this, ContactsContract.Profile.class));
+            startActivity(new Intent(SignInActivity.this, PrincipalActivity.class));
         } else if (checkBox.equals("false")){
             Toast.makeText(this, "Please sign in", Toast.LENGTH_SHORT).show();
         }
@@ -90,6 +89,7 @@ public class SignInActivity extends AppCompatActivity {
                password.requestFocus();
            }else {
                validate(email.getText().toString(),password.getText().toString());
+               startActivity(new Intent(SignInActivity.this, PrincipalActivity.class));
            }
         });
 
@@ -125,7 +125,7 @@ public class SignInActivity extends AppCompatActivity {
         boolean isEmailFlag = firebaseUser.isEmailVerified();
         if (isEmailFlag){
             finish();
-            startActivity(new Intent(SignInActivity.this, ContactsContract.Profile.class));
+            startActivity(new Intent(SignInActivity.this, ProfileActivity.class));
         }else {
             Toast.makeText(this,"Please check your email !",Toast.LENGTH_SHORT).show();
             firebaseAuth.signOut();

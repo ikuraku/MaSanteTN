@@ -1,122 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".profileActivity">
+    tools:context=".ProfileActivity"
+    android:id="@+id/drawer_profile">
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view_profil"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:theme="@style/NavigationTheme"
+        app:headerLayout="@layout/header_menu"
+        app:menu="@menu/main_menu"
+        app:itemIconSize="30sp"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="15sp"
         tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/menuIconProfil"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/menu"
+            android:layout_margin="15sp"
+            app:tint="@color/colorApp"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/shape"
             android:orientation="vertical"
-            android:padding="12sp"
-            android:layout_margin="20sp">
-            <TextView
+            android:padding="10sp"
+            android:layout_marginTop="50sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginLeft="10sp" >
 
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="FullName"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 android:textColor="@color/colorApp"
-                android:layout_gravity="center" />
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_gravity="center"/>
+
             <EditText
-                android:id="@+id/fullNameProfile"
+                android:text="name"
+                android:id="@+id/fullNameProfil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10sp"
                 android:textAlignment="center"
-                android:textSize="15sp"
                 android:textColor="@color/black"
+                android:textStyle="italic"
+                android:textSize="20sp"
                 android:layout_gravity="center"
                 android:focusableInTouchMode="false"/>
-            <TextView
 
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Email"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 android:textColor="@color/colorApp"
-                android:layout_gravity="center" />
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_gravity="center"/>
+
             <EditText
-                android:id="@+id/emailProfile"
+                android:id="@+id/emailProfil"
+                android:text="email adress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textStyle="italic"
                 android:layout_margin="10sp"
                 android:textAlignment="center"
-                android:textSize="15sp"
                 android:textColor="@color/black"
+                android:textSize="20sp"
                 android:layout_gravity="center"
                 android:focusableInTouchMode="false"/>
-            <TextView
 
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Phone number "
-                android:textSize="20sp"
-                android:textStyle="bold"
+                android:text="Phone Number"
                 android:textColor="@color/colorApp"
-                android:layout_gravity="center" />
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_gravity="center"/>
+
             <EditText
-                android:id="@+id/phoneProfile"
+                android:id="@+id/phoneNumberProfil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="phone number"
                 android:layout_margin="10sp"
                 android:textAlignment="center"
-                android:textSize="15sp"
+                android:textStyle="italic"
                 android:textColor="@color/black"
+                android:textSize="20sp"
                 android:layout_gravity="center"
                 android:focusableInTouchMode="false"/>
-            <TextView
 
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Num CIN"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 android:textColor="@color/colorApp"
-                android:layout_gravity="center" />
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_gravity="center"/>
+
             <EditText
-                android:id="@+id/cinProfile"
+                android:id="@+id/cinProfil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10sp"
                 android:textAlignment="center"
-                android:textSize="15sp"
+                android:text="cin"
                 android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic"
                 android:layout_gravity="center"
                 android:focusableInTouchMode="false"/>
 
         </LinearLayout>
+
         <Button
-            android:id="@+id/btsEditeProfile"
-            android:layout_width="250sp"
+            android:id="@+id/btnEditProfil"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:text="Edit"
-            android:layout_gravity="center"
+            android:textSize="25dp"
             android:backgroundTint="@color/white"
-            android:layout_margin="7sp"
             android:textColor="@color/colorApp"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:layout_gravity="center"
+            android:layout_marginTop="15sp"
+            app:cornerRadius="20sp"/>
+
         <Button
-            android:id="@+id/btsLogProfile"
-            android:layout_width="250sp"
+            android:id="@+id/btnLogOut"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="LOG OUT"
-            android:layout_gravity="center"
+            android:textSize="20dp"
             android:backgroundTint="@color/colorApp"
-            android:layout_margin="7sp"
-            android:textSize="18sp"/>
+            android:layout_gravity="center"
+            android:layout_marginTop="15sp" />
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
